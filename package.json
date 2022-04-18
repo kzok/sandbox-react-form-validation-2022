@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "type-check": "tsc --noEmit",
     "test": "jest",
     "lint:eslint": "eslint . --cache --cache-location ./tmp/cache/eslint",
