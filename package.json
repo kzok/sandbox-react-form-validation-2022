@@ -2,13 +2,15 @@
   "private": true,
   "scripts": {
     "type-check": "tsc --noEmit",
+    "test": "jest",
     "lint:eslint": "eslint . --cache --cache-location ./tmp/cache/eslint",
     "lint:prettier": "prettier --check .",
     "lint": "run-p -l -c --aggregate-output lint:*",
     "fmt:eslint": "eslint --fix .",
     "fmt:prettier": "prettier --write .",
     "fmt": "run-s fmt:prettier fmt:eslint",
-    "precommit": "run-p -l --aggregate-output type-check lint:*"
+    "precommit:test": "jest --onlyChanged",
+    "precommit": "run-p -l --aggregate-output type-check lint:* precommit:*"
   },
   "devDependencies": {
     "@types/jest": "^27.4.1",
