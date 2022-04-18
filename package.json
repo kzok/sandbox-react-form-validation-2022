@@ -7,7 +7,8 @@
     "lint": "run-p -l -c --aggregate-output lint:*",
     "fmt:eslint": "eslint --fix .",
     "fmt:prettier": "prettier --write .",
-    "fmt": "run-s fmt:prettier fmt:eslint"
+    "fmt": "run-s fmt:prettier fmt:eslint",
+    "precommit": "run-p -l --aggregate-output type-check lint:*"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.19.0",
