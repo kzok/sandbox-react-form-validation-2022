@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "type-check": "tsc --noEmit",
     "lint:eslint": "eslint . --cache --cache-location ./tmp/cache/eslint",
     "lint:prettier": "prettier --check .",
     "lint": "run-p -l -c --aggregate-output lint:*",
